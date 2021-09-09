@@ -52,11 +52,13 @@ pd.DataFrame(Survivors).to_csv("Survivors.csv")
 
 ### Getting all LostChild formated as excel sheet
 for x in range (1,num_of_arrays):
-	z = data[x,5]
-	if z <= '17':
-		y = data[x]
-		Y = y.tolist()
-		LostChild.append(Y)
+    q = data[x,1] 
+    if q == '0':
+        z = data[x,5]
+        if z <= '17':
+		        y = data[x]
+		        Y = y.tolist()
+		        LostChild.append(Y)
 print(LostChild)
 pd.DataFrame(LostChild).to_csv("LostChild.csv")
 
